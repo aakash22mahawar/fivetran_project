@@ -1,5 +1,5 @@
 WITH cte AS (
-  SELECT * , SPLIT_PART(location, ',', 1) as city FROM {{ ref('src_data') }}
+  SELECT * , SPLIT_PART("Location", ',', 1) as city FROM {{ ref('src_data') }}
 )
 
 SELECT
